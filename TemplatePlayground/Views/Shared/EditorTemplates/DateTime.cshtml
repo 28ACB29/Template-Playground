@@ -1,0 +1,9 @@
+﻿@model System.DateTime
+
+<div class="form-group">
+	@Html.LabelFor(model => model, htmlAttributes: new { @class = "control-label col-md-2" })
+	<div class="col-md-10">
+		@Html.TextBoxFor(model => model, "{0:yyyy-MM-dd}", htmlAttributes: new { @type = "date", @class = "form-control" })
+		@Html.ValidationMessageFor(model => model, "", new { @class = "text-danger" })
+	</div>
+</div>

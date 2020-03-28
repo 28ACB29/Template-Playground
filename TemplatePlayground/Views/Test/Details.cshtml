@@ -1,0 +1,32 @@
+﻿@model TemplatePlayground.Models.Test
+
+@{
+	/**/
+
+	ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+	<h4>Test</h4>
+	<hr />
+	@Html.DisplayFor(model => model.Bool)
+	@Html.DisplayFor(model => model.Byte)
+	@Html.DisplayFor(model => model.Char)
+	@Html.DisplayFor(model => model.DateTime)
+	@Html.DisplayFor(model => model.Decimal)
+	@Html.DisplayFor(model => model.Double)
+	@Html.DisplayFor(model => model.Float)
+	@Html.DisplayFor(model => model.Int)
+	@Html.DisplayFor(model => model.Long)
+	@*@Html.DisplayFor(model => model.Sbyte)*@
+	@Html.DisplayFor(model => model.Short)
+	@Html.DisplayFor(model => model.Uint)
+	@Html.DisplayFor(model => model.Ulong)
+	@Html.DisplayFor(model => model.Ushort)
+</div>
+<p>
+	@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+	@Html.ActionLink("Back to List", "Index")
+</p>

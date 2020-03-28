@@ -1,0 +1,9 @@
+﻿@model System.Byte
+
+<div class="form-group">
+	@Html.LabelFor(model => model, htmlAttributes: new { @class = "control-label col-md-2" })
+	<div class="col-md-10">
+		@Html.TextBoxFor(model => model, htmlAttributes: new { @type = "number", @min = @Byte.MinValue, @max = @Byte.MaxValue, @step = "1", @class = "form-control" })
+		@Html.ValidationMessageFor(model => model, "", new { @class = "text-danger" })
+	</div>
+</div>

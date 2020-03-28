@@ -1,0 +1,49 @@
+﻿@model TemplatePlayground.Models.Test
+
+@{
+	/**/
+
+	ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using(Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+	<h4>Test</h4>
+	<hr />
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	@Html.EditorFor(model => model.Bool)
+	@Html.EditorFor(model => model.Byte, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Char, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.DateTime, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Decimal, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Double, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Float, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Int, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Long, new { htmlAttributes = new { @class = "form-control" } })
+	@*@Html.EditorFor(model => model.Sbyte, new { htmlAttributes = new { @class = "form-control" } })*@
+	@Html.EditorFor(model => model.Short, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Uint, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Ulong, new { htmlAttributes = new { @class = "form-control" } })
+	@Html.EditorFor(model => model.Ushort, new { htmlAttributes = new { @class = "form-control" } })
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10">
+			<input type="submit" value="Save" class="btn btn-default" />
+		</div>
+	</div>
+</div>
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts
+{
+	@Scripts.Render("~/bundles/jqueryval")
+}
